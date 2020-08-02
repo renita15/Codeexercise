@@ -1,7 +1,9 @@
 import { Selector, t } from "testcafe";
 
-fixture`Getting Started`.page // declare the fixture
-`https:///www.propelleraero.com/`; // specify the start page
+fixture(`Getting Started`).page(
+  // declare the fixture
+  `https:///www.propelleraero.com/`
+); // specify the start page
 
 test("Propeller QA Challenge", async (t) => {
   await t
@@ -48,5 +50,8 @@ test("Propeller QA Challenge", async (t) => {
 });
 
 function wordCount(words) {
+  words = words.replace(/(^\s*)|(\s*$)/gi, "");
+  words = words.replace(/[ ]{2,}/gi, " ");
+  words = words.replace(/\n /, "\n");
   return words.split(" ").length;
 }
