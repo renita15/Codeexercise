@@ -5,9 +5,10 @@ fixture(`Getting Started`).page(
   `https:///www.propelleraero.com/`
 ); // specify the start page
 
-test("Propeller QA Challenge", async (t) => {
+test("Test", async (t) => {
   await t
     //maximise the brower window
+
     .maximizeWindow()
 
     //click on the Blog link
