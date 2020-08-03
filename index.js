@@ -50,6 +50,7 @@ test("Test", async (t) => {
   console.log("Blog Title with highest number of words: " + title);
 });
 
+//word count
 function wordCount(words) {
   words = words.replace(/(^\s*)|(\s*$)/gi, "");
   words = words.replace(/[ ]{2,}/gi, " ");
